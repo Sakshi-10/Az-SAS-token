@@ -1,0 +1,18 @@
+Generate Azure SAS token using Azure CLI 
+
+Step-by-step Instructions for Azure CLI:
+1. Login to Azure CLI: First, make sure you’re logged into your Azure account using:
+az login
+
+2. Generate SAS Token: You can generate a SAS token for a blob container, file share, or other resources. 
+Here’s an example for a Blob Storage SAS token
+
+az storage container generate-sas \
+  --account-name <your_storage_account_name> \
+  --name <your_container_name> \
+  --permissions rwl \
+  --expiry <expiration_date> \
+  --output tsv
+
+
+
